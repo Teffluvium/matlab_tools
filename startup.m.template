@@ -1,0 +1,25 @@
+%% Default settings
+format long
+format compact
+
+% Set the desired top level working directory
+basePath = 'C:\Users\herrti\Documents\MATLAB\Tools';
+
+% This should be the path to directory containing the addpathExcept.m file
+addpathExceptPath = fullfile( basePath, 'mfiles','misc' );
+
+% Bootstrap the directory with the addpathExcept.m file
+addpath( addpathExceptPath );
+
+% Add any other desired paths that you want added to you path on startup
+goodPaths = { ...
+    basePath, ...
+    };
+
+% Add paths that you don't want added to initial Matlab path
+badPaths  = { ...
+    };
+
+addpathExcept( goodPaths, badPaths );
+
+caca;
