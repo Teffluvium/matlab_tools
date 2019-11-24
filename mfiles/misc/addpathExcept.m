@@ -59,6 +59,8 @@ end
 
 if nargout > 0
     p = path;
+else
+    clear p;
 end
 
 
